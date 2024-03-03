@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <title>Upload</title>
+</head>
+<body>
+ 
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label class="file">
+                <input type="file" name="file" id="file" multiple aria-label="File browser example">
+                <span class="file-custom"></span>
+            </label>
+            <input type="text" name="folder" placeholder="path / folder" autocomplete="off"/>
+            <button type="submit">Submit</button>
+        </form>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

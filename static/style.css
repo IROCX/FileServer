@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    margin: 15px 0;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    letter-spacing: 1px;
+}
+
+input:focus {
+    border: 1px solid rgb(85, 178, 255);
+}
+
+.file {
+    text-align: center;
+}
+
+.file>input {
+    opacity: 0;
+}
+
+.file-custom {
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    margin: 0 auto;
+    height: 2.5rem;
+    padding: .5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+    border: .075rem solid #ddd;
+    border-radius: .25rem;
+    box-shadow: inset 0 0.2rem 0.4rem rgb(0 0 0 / 5%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.file-custom::after {
+    content: "Choose file...";
+    box-sizing: border-box;
+}
+
+button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 5px;
+    border: none;
+    background-color: rgb(49, 155, 75);
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.25s;
+}
+
+button:hover {
+    background-color: rgb(69, 170, 100);
+    box-shadow: 0.5px 0.5px 1px 0.5px rgb(175, 243, 196);
+}
+
+/* progressbars */
+
+.upload-progress {
+    width: 90%;
+}
+
+.file-element {
+    margin: 20px 0;
+}
+
+.file-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-detail p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 30px;
+}
+
+.filename {
+    margin: 0 10px 5px 0;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.status {
+    font-style: italic;
+}
+
+.complete {
+    color: green;
+}
+
+.failed {
+    color: red;
+}
+
+.uploading {
+    color: blue;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 15px;
+    color: white;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+.fill {
+    height: 100%;
+    display: inline-block;
+    border-radius: 9px;
+    background-color: green;
+    padding: 1px;
+}
+
+@media only screen and (max-width: 650px) {
+    form {
+        width: 90%;
+    }
+    input {
+        margin: 15px 0;
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        letter-spacing: 1px;
+    }
+    .progress-bar {
+        padding: 0 5px 0 2.5px;
+    }
+    .fill {
+        height: 7.5px;
+        margin: 1px 1px 1px 1px;
+    }
+}
